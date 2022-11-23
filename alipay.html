@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Alipay</title>
+    <style>
+        :root {
+            --blue: #1976FF;
+            --red: #D80E34;
+            --dark-red: #B4052E;
+            --width: 54mm;
+            --height: 85mm;
+        }
+
+        #card {
+            /* border: 1px black dotted; */
+            width: var(--width);
+            height: var(--height);
+            background-color: var(--blue);
+            position: relative;
+        }
+
+        #receive {
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        #alipay-header {
+            width: 25%;
+            height: 90%;
+            background-color: whitesmoke;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 2mm;
+        }
+
+        #alipay-logo {
+            width: 7mm;
+            height: 7mm;
+            border-radius: 20%;
+            background-image: url('alipay.png');
+            background-size: cover;
+            margin-bottom: 2mm;
+        }
+
+        #alipay-title {
+            writing-mode: vertical-lr;
+            font-family: HGS創英ﾌﾟﾚｾﾞﾝｽEB;
+            font-size: large;
+        }
+
+        #qr1 {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            margin-top: 5mm;
+        }
+
+        #qr1-img {
+            width: 80%;
+            height: 50%;
+            background-image: url('qr.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        #qr2 {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            margin-top: 7mm;
+        }
+
+        #qr2-img {
+            width: 60%;
+            height: 90%;
+            background-image: url('qr.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        #redbag {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 40%;
+            background-color: var(--red);
+            z-index: 100;
+            display: flex;
+        }
+
+        #redbag-title {
+            font-family: Noto Sans CJK SC Medium;
+            writing-mode: vertical-lr;
+            font-size: large;
+            text-align: right;
+            display: inline-block;
+            letter-spacing: 0.3mm;
+            color: whitesmoke;
+            padding-bottom: 3mm;
+        }
+
+        #redbag-title2 {
+            font-family: Noto Sans CJK SC Medium;
+            writing-mode: vertical-lr;
+            font-size: 3mm;
+            text-align: right;
+            display: inline-block;
+            color: #F8C479;
+            padding: 0 6mm;
+            padding-bottom: 3mm;
+            padding-left: 1mm;
+        }
+
+        #redbag-cover {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 40%;
+            transform: scaleY(0.4);
+            transform-origin: top;
+            z-index: 10;
+        }
+
+        #square {
+            position: absolute;
+            left: calc(var(--width) * 0.5);
+            width: calc(var(--width) * 0.708);
+            height: calc(var(--width) * 0.708);
+            background-color: var(--dark-red);
+            transform: translate(-50%, -50%) rotate(45deg);
+            border-top-left-radius: 10mm;
+            box-shadow: 10px 10px 10mm 1mm rgb(139 0 0 / 50%);
+        }
+
+        #redbag-cover2 {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 40%;
+            transform: scaleY(0.2);
+            transform-origin: top;
+            z-index: 1000;
+        }
+
+        #square2 {
+            position: absolute;
+            left: calc(var(--width) * 0.5);
+            width: calc(var(--width) * 0.708);
+            height: calc(var(--width) * 0.708);
+            background-color: var(--dark-red);
+            transform: translate(-50%, -50%) rotate(45deg);
+            border-bottom-right-radius: 15mm;
+            box-shadow: inset -10px -10px 1mm 0mm rgb(0 0 0 / 10%);
+        }
+    </style>
+</head>
+<body>
+    <div id="card">
+        <div id="receive">
+            <div id="alipay-header">
+                <div id="alipay-logo"></div>
+                <div id="alipay-title">推荐使用支付宝</div>
+            </div>
+            <div id="qr1">
+                <div id="qr1-img"></div>
+            </div>
+        </div>
+        <div id="redbag">
+            <div id="qr2">
+                <div id="qr2-img"></div>
+            </div>
+            <div id="redbag-title">扫码领红包</div>
+            <div id="redbag-title2">天天可领 想花就花</div>
+        </div>
+        <div id="redbag-cover">
+            <div id="square"></div>
+        </div>
+        <div id="redbag-cover2">
+            <div id="square2"></div>
+        </div>
+    </div>
+</body>
+</html>
